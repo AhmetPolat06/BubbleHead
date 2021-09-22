@@ -516,7 +516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661852381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.629248, y: 10.159625, z: -83.51297}
+  m_LocalPosition: {x: 21.629244, y: 10.159625, z: -83.51297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1057762837}
@@ -615,6 +615,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &716406168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716406170}
+  - component: {fileID: 716406169}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &716406169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716406168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e2508b1e3f116459d00709b7c06c24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1296843921}
+  spawnPoints:
+  - {fileID: 1099246283}
+  - {fileID: 1245297743}
+  - {fileID: 661852381}
+  - {fileID: 1494000315}
+  - {fileID: 155847465}
+  - {fileID: 1897525667}
+  - {fileID: 1799008158}
+  - {fileID: 809321666}
+  - {fileID: 2038648933}
+  - {fileID: 534979789}
+  - {fileID: 2125142617}
+  alien: {fileID: 8502498163686235906, guid: fbcdf7986c980f540a5e07b89475e5e6, type: 3}
+  maxAliensOnScreen: 10
+  totalAliens: 10
+  minSpawnTime: 0
+  maxSpawnTime: 3
+  aliensPerSpawn: 1
+--- !u!4 &716406170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716406168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.987129, y: 16.708775, z: 4.676572}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &809321666
 GameObject:
   m_ObjectHideFlags: 0
