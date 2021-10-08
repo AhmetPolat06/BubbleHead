@@ -31,12 +31,12 @@ public class PlayerController : MonoBehaviour
  0, Input.GetAxis("Vertical"));
         if (moveDirection == Vector3.zero)
         {
-            bodyAnimator.SetBool("IsMoving", false);
+            bodyAnimator.SetBool("isMoving", false);
         }
         else
         {
             head.AddForce(transform.right * 150, ForceMode.Acceleration);
-            bodyAnimator.SetBool("IsMoving", true);
+            bodyAnimator.SetBool("isMoving", true);
         }
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
