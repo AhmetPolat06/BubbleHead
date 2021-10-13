@@ -10,11 +10,21 @@ public class Alien : MonoBehaviour
     public UnityEvent OnDestroy;
     public Rigidbody head;
 
+    private DeathParticles deathParticles;
     public bool isAlive = true;
     private float navigationTime = 0;
     private NavMeshAgent agent;
 
     // Start is called before the first frame update
+    public DeathParticles GetDeathParticles()
+    {
+        if (deathParticles == null)
+        {
+            deathParticles = GetComponentInChildren<DeathParticles>();
+        }
+        return deathParticles;
+    }
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -52,7 +62,11 @@ public class Alien : MonoBehaviour
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
 
         head.GetComponent<SelfDestruct>().Initiate();
-
+        if (deathParticles)
+        {
+            deathParticles.transform.parent = null;
+            deathParticles.Activate();
+        }
         Destroy(gameObject);
     }
     void OnTriggerEnter(Collider other)
